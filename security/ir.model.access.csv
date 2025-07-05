@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agro_machinery_user,agro.machinery user,model_agro_machinery,agro_machinery.group_agro_machinery_user,1,0,0,0
+access_agro_machinery_admin,agro.machinery admin,model_agro_machinery,agro_machinery.group_agro_machinery_admin,1,1,1,1
+access_agro_maintenance_user,agro.maintenance user,model_agro_maintenance,agro_machinery.group_agro_machinery_user,1,0,0,0
+access_agro_maintenance_admin,agro.maintenance admin,model_agro_maintenance,agro_machinery.group_agro_machinery_admin,1,1,1,1
