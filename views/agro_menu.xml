@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <menuitem id="menu_agro_root"
+            name="Agro"
+            sequence="10"
+            icon="fa-leaf"/>
+
+  <menuitem id="menu_agro_machinery"
+            name="Maquinaria"
+            parent="menu_agro_root"
+            sequence="20"/>
+
+  <menuitem id="menu_agro_maintenance"
+            name="Mantenimientos"
+            parent="menu_agro_root"
+            sequence="30"/>
+</odoo>
