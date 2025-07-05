@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_agro_machinery_form" model="ir.ui.view">
+    <field name="name">agro.machinery.form</field>
+    <field name="model">agro.machinery</field>
+    <field name="arch" type="xml">
+      <form string="Maquinaria">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="machinery_type"/>
+            <field name="serial_number"/>
+            <field name="purchase_date"/>
+            <field name="value"/>
+            <field name="state"/>
+            <field name="employee_id"/>
+          </group>
+          <notebook>
+            <page string="Mantenimientos">
+              <field name="maintenance_ids">
+                <tree editable="bottom">
+                  <field name="name"/>
+                  <field name="date"/>
+                  <field name="technician"/>
+                  <field name="cost"/>
+                </tree>
+              </field>
+            </page>
+            <page string="Notas">
+              <field name="notes"/>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_agro_machinery_tree" model="ir.ui.view">
+    <field name="name">agro.machinery.tree</field>
+    <field name="model">agro.machinery</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="machinery_type"/>
+        <field name="state"/>
+        <field name="employee_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_agro_machinery_search" model="ir.ui.view">
+    <field name="name">agro.machinery.search</field>
+    <field name="model">agro.machinery</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+        <field name="machinery_type"/>
+        <field name="state"/>
+        <field name="employee_id"/>
+      </search>
+    </field>
+  </record>
+
+  <record id="action_agro_machinery" model="ir.actions.act_window">
+    <field name="name">Maquinaria</field>
+    <field name="res_model">agro.machinery</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p>Gestioná tu maquinaria agrícola y su historial de mantenimiento.</p>
+    </field>
+  </record>
+
+  <menuitem id="menu_agro_machinery_items"
+            name="Listado"
+            parent="menu_agro_machinery"
+            action="action_agro_machinery"
+            sequence="10"/>
+</odoo>
