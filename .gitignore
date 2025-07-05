@@ -1,0 +1,31 @@
+# __pycache__ y archivos temporales
+__pycache__/
+*.py[cod]
+*.pyo
+*.swp
+*.bak
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales
+.env/
+.venv/
+env/
+venv/
+
+# Logs
+*.log
+
+# Archivos de pruebas o backups
+*.zip
+*.tar.gz
+*.tgz
+*.old
+*.orig
+
+# Archivos de configuración local (por ejemplo, Replit o VSCode)
+.replit
+.vscode/
+*.code-workspace
