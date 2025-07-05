@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_agro_maintenance_form" model="ir.ui.view">
+    <field name="name">agro.maintenance.form</field>
+    <field name="model">agro.maintenance</field>
+    <field name="arch" type="xml">
+      <form string="Mantenimiento">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="date"/>
+            <field name="machinery_id"/>
+            <field name="technician"/>
+            <field name="cost"/>
+          </group>
+          <group>
+            <field name="parts_used"/>
+            <field name="task_description"/>
+            <field name="notes"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_agro_maintenance_tree" model="ir.ui.view">
+    <field name="name">agro.maintenance.tree</field>
+    <field name="model">agro.maintenance</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="date"/>
+        <field name="machinery_id"/>
+        <field name="technician"/>
+        <field name="cost"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_agro_maintenance_search" model="ir.ui.view">
+    <field name="name">agro.maintenance.search</field>
+    <field name="model">agro.maintenance</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+        <field name="date"/>
+        <field name="machinery_id"/>
+        <field name="technician"/>
+      </search>
+    </field>
+  </record>
+
+  <record id="action_agro_maintenance" model="ir.actions.act_window">
+    <field name="name">Mantenimientos</field>
+    <field name="res_model">agro.maintenance</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p>Registrá y consultá el historial de mantenimiento de tu maquinaria.</p>
+    </field>
+  </record>
+
+  <menuitem id="menu_agro_maintenance_items"
+            name="Historial"
+            parent="menu_agro_maintenance"
+            action="action_agro_maintenance"
+            sequence="10"/>
+</odoo>
