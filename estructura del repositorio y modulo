@@ -1,0 +1,47 @@
+📁 Estructura del módulo agro_machinery
+
+agro_machinery/
+├── __init__.py
+├── __manifest__.py
+├── README.md
+├── models/
+│   ├── __init__.py
+│   ├── machinery.py
+│   └── maintenance.py
+├── views/
+│   ├── agro_menu.xml
+│   ├── machinery_views.xml
+│   ├── maintenance_views.xml
+│   └── dashboard_views.xml
+├── security/
+│   ├── ir.model.access.csv
+│   └── security.xml
+├── data/
+│   └── machinery_demo.xml
+├── static/
+│   └── description/
+│       └── icon.png
+
+📄 Explicación rápida de cada carpeta y archivo
+
+| Carpeta / Archivo              | Función                                                                 |
+|-------------------------------|-------------------------------------------------------------------------|
+| `__manifest__.py`             | Metadata del módulo: nombre, versión, dependencias, autor, etc.        |
+| `README.md`                   | Documentación trilingüe: instalación, uso, objetivos                    |
+| `models/`                     | Archivos Python con definición de modelos: maquinaria y mantenimiento  |
+| ├── `__init__.py`             | Importa los modelos al cargar el módulo                                |
+| ├── `machinery.py`           | Modelo `agro.machinery`: define los campos y relaciones de maquinaria  |
+| └── `maintenance.py`         | Modelo `agro.maintenance`: historial de mantenimientos y detalles       |
+| `views/`                      | Vistas XML: formularios, listas, kanban, dashboard y menú              |
+| ├── `agro_menu.xml`          | Menú principal de la aplicación                                        |
+| ├── `machinery_views.xml`    | Vistas para maquinaria: form, tree, search                             |
+| ├── `maintenance_views.xml`  | Vistas para mantenimiento                                              |
+| └── `dashboard_views.xml`    | Vista de resumen o tablero                                             |
+| `security/`                   | Reglas de acceso y permisos de usuario                                 |
+| ├── `ir.model.access.csv`    | Define los permisos por grupo                                          |
+| └── `security.xml`           | Grupos de seguridad y restricciones                                   |
+| `data/`                       | Datos opcionales de carga inicial o demo                               |
+| └── `machinery_demo.xml`     | Registros de ejemplo para pruebas                                      |
+| `static/description/`        | Recursos estáticos, como el ícono del módulo                           |
+| └── `icon.png`               | Ícono que aparece en la interfaz de Odoo                               |
+
