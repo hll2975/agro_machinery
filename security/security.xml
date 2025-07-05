@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <!-- Grupo de usuarios para gestión de maquinaria -->
+    <record id="group_agro_machinery_user" model="res.groups">
+      <field name="name">Usuario Maquinaria</field>
+      <field name="category_id" ref="base.module_category_hr"/>
+    </record>
+
+    <!-- Grupo de administradores del módulo -->
+    <record id="group_agro_machinery_admin" model="res.groups">
+      <field name="name">Administrador Maquinaria</field>
+      <field name="category_id" ref="base.module_category_hr"/>
+      <field name="implied_ids" eval="[(4, ref('group_agro_machinery_user'))]"/>
+    </record>
+
+  </data>
+</odoo>
