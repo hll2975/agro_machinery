@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_agro_dashboard_action" model="ir.actions.client">
+    <field name="name">Resumen de Maquinaria</field>
+    <field name="tag">agro_machinery_dashboard</field>
+  </record>
+
+  <menuitem id="menu_agro_dashboard"
+            name="Dashboard"
+            parent="menu_agro_root"
+            action="view_agro_dashboard_action"
+            sequence="40"/>
+</odoo>
